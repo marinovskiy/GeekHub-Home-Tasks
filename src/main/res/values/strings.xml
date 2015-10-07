@@ -6,12 +6,4 @@
     <string name="set_s_fragment">Set second fragment</string>
     <string name="set_text_btn">Set text to activity</string>
 
-    <string-array name="simpsons">
-        <item>Homer</item>
-        <item>Marge</item>
-        <item>Bart</item>
-        <item>Lisa</item>
-        <item>Maggie</item>
-    </string-array>
-
 </resources>

@@ -16,7 +16,7 @@ public class FragmentTwo extends Fragment {
     Spinner spinner;
     Button button;
     String name, surname = "Simpson ";
-    String data[] = {"Homer", "Marge", "Bart", "Lisa", "Magie"};
+    String data[] = {"Homer", "Marge", "Bart", "Lisa", "Maggie"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,8 +26,8 @@ public class FragmentTwo extends Fragment {
         spinner = (Spinner) view.findViewById(R.id.spinner);
         button = (Button) view.findViewById(R.id.btn_frag_two);
 
-        ArrayAdapter<?> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.simpsons,
-                R.layout.spinner_item);
+        ArrayAdapter<?> adapter = new ArrayAdapter<>(getActivity().getApplicationContext(),
+                R.layout.spinner_item, data);
         adapter.setDropDownViewResource(R.layout.spinner_item);
 
         spinner.setAdapter(adapter);
