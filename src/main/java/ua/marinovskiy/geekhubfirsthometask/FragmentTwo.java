@@ -46,7 +46,8 @@ public class FragmentTwo extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((TextView) getActivity().findViewById(R.id.tv)).setText(surname + name);
+                TextView tv = ((TextView) getActivity().findViewById(R.id.tv));
+                tv.setText(surname + name);
             }
         });
 
