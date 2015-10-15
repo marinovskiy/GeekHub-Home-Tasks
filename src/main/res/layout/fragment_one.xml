@@ -5,21 +5,21 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/et"
+        android:id="@+id/edit_text_fht"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginLeft="@dimen/edit_text_margin"
+        android:layout_marginRight="@dimen/edit_text_margin"
         android:hint="@string/input_text"
-        android:textSize="14sp"
-        android:padding="10dp" />
+        android:padding="@dimen/edit_text_padding"
+        android:textSize="@dimen/text_main_size" />
 
     <Button
         android:id="@+id/btn_frag_one"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/main_btn_width"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:text="@string/set_text_btn" />
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/btn_top_margin"
+        android:text="@string/set_text_btn"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package ua.marinovskiy.geekhubfirsthometask;
+package ua.marinovskiy.geekhubhometasks.hometask1;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import ua.marinovskiy.geekhubhometasks.R;
 
 public class FragmentTwo extends Fragment {
 
@@ -46,7 +48,7 @@ public class FragmentTwo extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView tv = ((TextView) getActivity().findViewById(R.id.tv));
+                TextView tv = ((TextView) getActivity().findViewById(R.id.text_view_fht));
                 tv.setText(surname + name);
             }
         });

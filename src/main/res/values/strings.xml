@@ -1,9 +1,21 @@
 <resources>
-    <string name="app_name">GeekHub First HomeTask</string>
+    <string name="app_name">GeekHub Home Tasks</string>
+    <string name="btn_first_ht">First home task</string>
+    <string name="btn_second_ht">Second home task</string>
 
+    <!--first home task-->
+    <string name="first_ht_label">First Home Task</string>
     <string name="input_text">Please, input some text...</string>
-    <string name="set_f_fragment">Set first fragment</string>
-    <string name="set_s_fragment">Set second fragment</string>
+    <string name="nothing_to_show">Nothing to show</string>
+    <string name="btn_set_first_fragment">Set first fragment</string>
+    <string name="btn_set_second_fragment">Set second fragment</string>
     <string name="set_text_btn">Set text to activity</string>
+
+    <!--second home task-->
+    <string name="second_ht_label">Second Home Task</string>
+    <string name="btn_fibonacci">Fibonacci</string>
+    <string name="btn_factorial">Factorial</string>
+    <string name="input_factorial">Please, input number</string>
+    <string name="btn_calculate">Calculate</string>
 
 </resources>

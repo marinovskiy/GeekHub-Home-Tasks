@@ -8,13 +8,14 @@
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"></Spinner>
+        android:layout_marginLeft="@dimen/spinner_margin"
+        android:layout_marginRight="@dimen/spinner_margin" />
 
     <Button
         android:id="@+id/btn_frag_two"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/main_btn_width"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:text="@string/set_text_btn" />

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_text_factorial"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:padding="@dimen/edit_text_padding"
+        android:textColor="@color/textColorMain"
+        android:textSize="@dimen/text_main_size" />
+
+    <Button
+        android:id="@+id/btn_frag_factorial"
+        android:layout_width="@dimen/main_btn_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/btn_top_margin"
+        android:text="@string/btn_calculate" />
+
+    <TextView
+        android:id="@+id/tv_factorial_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/btn_top_margin"
+        android:textColor="@color/textColorMain"
+        android:textSize="@dimen/text_main_size" />
+
+</LinearLayout>
