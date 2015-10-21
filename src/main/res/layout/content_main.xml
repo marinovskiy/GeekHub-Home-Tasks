@@ -6,27 +6,16 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="horizontal"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/main_activity_margin"
+    android:paddingRight="@dimen/main_activity_margin"
+    android:paddingTop="@dimen/main_activity_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <Button
-        android:id="@+id/btn_first_ht"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/main_btn_margin"
-        android:layout_weight="2"
-        android:text="@string/btn_first_ht" />
-
-    <Button
-        android:id="@+id/btn_second_ht"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/main_btn_margin"
-        android:layout_weight="2"
-        android:text="@string/btn_second_ht" />
+    <ListView
+        android:id="@+id/list_view_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

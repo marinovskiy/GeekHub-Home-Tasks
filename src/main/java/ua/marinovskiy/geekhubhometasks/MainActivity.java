@@ -5,15 +5,23 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 import ua.marinovskiy.geekhubhometasks.hometask1.FirstHomeTask;
 import ua.marinovskiy.geekhubhometasks.hometask2.SecondHomeTask;
+import ua.marinovskiy.geekhubhometasks.hometask3.ThirdHomeTask;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_first_ht, btn_second_ht;
     Intent intent;
+    ListView listView;
+    MenuAdapter menuAdapter;
+
+    ArrayList<String> home_task_titles = new ArrayList<>();
+    ArrayList<Class> home_tasks = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,24 +30,29 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        btn_first_ht = (Button) findViewById(R.id.btn_first_ht);
-        btn_second_ht = (Button) findViewById(R.id.btn_second_ht);
+        initList();
 
-        btn_first_ht.setOnClickListener(new View.OnClickListener() {
+        menuAdapter = new MenuAdapter(this, home_task_titles);
+
+        listView = (ListView) findViewById(R.id.list_view_menu);
+        listView.setAdapter(menuAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                intent = new Intent(MainActivity.this, FirstHomeTask.class);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                intent = new Intent(MainActivity.this, home_tasks.get(position));
                 startActivity(intent);
             }
         });
+    }
 
-        btn_second_ht.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(MainActivity.this, SecondHomeTask.class);
-                startActivity(intent);
-            }
-        });
+    public void initList() {
+        home_tasks.add(FirstHomeTask.class);
+        home_tasks.add(SecondHomeTask.class);
+        home_tasks.add(ThirdHomeTask.class);
 
+        home_task_titles.add(FirstHomeTask.class.getSimpleName());
+        home_task_titles.add(SecondHomeTask.class.getSimpleName());
+        home_task_titles.add(ThirdHomeTask.class.getSimpleName());
     }
 }

@@ -29,6 +29,11 @@
             android:label="@string/second_ht_label"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="ua.marinovskiy.geekhubhometasks.hometask3.ThirdHomeTask"
+            android:label="@string/third_ht_label"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

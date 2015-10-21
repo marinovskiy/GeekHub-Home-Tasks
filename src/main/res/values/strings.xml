@@ -18,4 +18,7 @@
     <string name="input_factorial">Please, input number</string>
     <string name="btn_calculate">Calculate</string>
 
+    <!--third home task-->
+    <string name="third_ht_label">Third Home Task</string>
+
 </resources>
