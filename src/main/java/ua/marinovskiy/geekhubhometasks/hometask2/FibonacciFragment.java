@@ -42,7 +42,7 @@ public class FibonacciFragment extends Fragment {
                                 Toast.LENGTH_SHORT).show();
                     } else {
                         result = String.valueOf(Calculation.fibonacci(number));
-                        tv_result.setText(number + "th number of Fibonacci sequence = " + result);
+                        tv_result.setText(String.format("%sth number of Fibonacci sequence = %s", number, result));
                     }
                 }
             }

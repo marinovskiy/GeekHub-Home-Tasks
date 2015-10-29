@@ -41,7 +41,7 @@ public class FactorialFragment extends Fragment {
                         Toast.makeText(getActivity().getApplicationContext(), "You input too large number", Toast.LENGTH_SHORT).show();
                     } else {
                         result = String.valueOf(Calculation.factorial(number));
-                        tv_result.setText("Factorial of " + number + " = " + result);
+                        tv_result.setText(String.format("Factorial of %s = %s", number, result));
                     }
                 }
             }

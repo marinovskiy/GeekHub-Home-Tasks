@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import ua.marinovskiy.geekhubhometasks.hometask1.FirstHomeTask;
 import ua.marinovskiy.geekhubhometasks.hometask2.SecondHomeTask;
 import ua.marinovskiy.geekhubhometasks.hometask3.ThirdHomeTask;
+import ua.marinovskiy.geekhubhometasks.hometask4.activity.FourthHomeTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,9 +51,11 @@ public class MainActivity extends AppCompatActivity {
         home_tasks.add(FirstHomeTask.class);
         home_tasks.add(SecondHomeTask.class);
         home_tasks.add(ThirdHomeTask.class);
+        home_tasks.add(FourthHomeTask.class);
 
         home_task_titles.add(FirstHomeTask.class.getSimpleName());
         home_task_titles.add(SecondHomeTask.class.getSimpleName());
         home_task_titles.add(ThirdHomeTask.class.getSimpleName());
+        home_task_titles.add(FourthHomeTask.class.getSimpleName());
     }
 }

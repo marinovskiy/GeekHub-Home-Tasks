@@ -21,4 +21,12 @@
     <!--third home task-->
     <string name="third_ht_label">Third Home Task</string>
 
+    <!--fourth home task-->
+    <string name="fourth_ht_label">Fourth Home Task</string>
+    <string name="my_fragment_text">My fragment</string>
+    <string name="show_next">Show next</string>
+    <string name="show_previous">Show previous</string>
+    <string name="text_next">Next</string>
+    <string name="text_previous">Previous</string>
+
 </resources>

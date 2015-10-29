@@ -10,6 +10,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
@@ -35,7 +37,7 @@ public class ThirdHomeTask extends AppCompatActivity {
     }
 
     private void createAndShowNumbers() {
-        ArrayList<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < values.length; i++) {
             list.add(values[i]);
         }
@@ -47,7 +49,7 @@ public class ThirdHomeTask extends AppCompatActivity {
     }
 
     private void reverseOrder() {
-        ArrayList<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         for (int i = values.length - 1; i >= 0; i--) {
             list.add(values[i]);
         }
@@ -59,7 +61,7 @@ public class ThirdHomeTask extends AppCompatActivity {
     }
 
     private void removeEveryThird() {
-        ArrayList<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < values.length; i++) {
             if ((i + 1) % 3 != 0) {
                 list.add(values[i]);
@@ -73,7 +75,7 @@ public class ThirdHomeTask extends AppCompatActivity {
     }
 
     private void removeDuplicates() {
-        LinkedHashSet<String> set = new LinkedHashSet<>();
+        Set<String> set = new LinkedHashSet<>();
         for (int i = 0; i < values.length; i++) {
             set.add(values[i]);
         }
@@ -86,7 +88,7 @@ public class ThirdHomeTask extends AppCompatActivity {
 
     private void sortValues() {
         Arrays.sort(values);
-        ArrayList<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < values.length; i++) {
             list.add(values[i]);
         }

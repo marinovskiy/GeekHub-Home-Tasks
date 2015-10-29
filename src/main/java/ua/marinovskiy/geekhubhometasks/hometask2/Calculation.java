@@ -4,24 +4,31 @@ public class Calculation {
 
     public static long factorial(long number) {
 
+        long result;
+
         if ((number == 1) || (number == 0)) {
-            return 1;
+            result = 1;
         } else {
-            return number * factorial(--number);
+            result = number * factorial(--number);
         }
+        return result;
     }
 
     public static long fibonacci(long number) {
+
+        long result;
+
         if ((number == 1) || (number == 2)) {
-            return 1;
+            result = 1;
         } else {
             long a = 1, b = 1;
             for (long i = 2; i < number; i++) {
                 a = a + b;
                 b = a - b;
             }
-            return a;
+            result = a;
         }
+        return result;
     }
 
 }

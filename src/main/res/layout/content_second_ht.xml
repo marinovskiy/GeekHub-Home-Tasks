@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/main_btn_margin"
             android:layout_weight="2"
-            android:text="@string/btn_fibonacci"/>
+            android:text="@string/btn_fibonacci" />
 
         <Button
             android:id="@+id/btn_factorial"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/main_btn_margin"
             android:layout_weight="2"
-            android:text="@string/btn_factorial"/>
+            android:text="@string/btn_factorial" />
 
     </LinearLayout>
 

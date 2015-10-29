@@ -34,6 +34,11 @@
             android:label="@string/third_ht_label"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".hometask4.activity.FourthHomeTask"
+            android:label="@string/fourth_ht_label"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
