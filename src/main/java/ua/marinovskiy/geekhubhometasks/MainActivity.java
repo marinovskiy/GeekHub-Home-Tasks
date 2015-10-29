@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import ua.marinovskiy.geekhubhometasks.hometask1.FirstHomeTask;
 import ua.marinovskiy.geekhubhometasks.hometask2.SecondHomeTask;
 import ua.marinovskiy.geekhubhometasks.hometask3.ThirdHomeTask;
-import ua.marinovskiy.geekhubhometasks.hometask4.activity.FourthHomeTask;
+import ua.marinovskiy.geekhubhometasks.hometask4.activities.FourthHomeTask;
 
 public class MainActivity extends AppCompatActivity {
 

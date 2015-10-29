@@ -1,10 +1,10 @@
-package ua.marinovskiy.geekhubhometasks.hometask4.activity;
+package ua.marinovskiy.geekhubhometasks.hometask4.activities;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import ua.marinovskiy.geekhubhometasks.R;
-import ua.marinovskiy.geekhubhometasks.hometask4.fragment.MyFragment;
+import ua.marinovskiy.geekhubhometasks.hometask4.fragments.MyFragment;
 
 public class FourthHomeTask extends BaseActivity {
 

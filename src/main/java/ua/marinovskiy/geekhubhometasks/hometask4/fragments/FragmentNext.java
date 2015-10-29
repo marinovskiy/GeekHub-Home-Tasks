@@ -1,4 +1,4 @@
-package ua.marinovskiy.geekhubhometasks.hometask4.fragment;
+package ua.marinovskiy.geekhubhometasks.hometask4.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

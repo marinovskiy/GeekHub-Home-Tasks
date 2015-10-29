@@ -1,4 +1,4 @@
-package ua.marinovskiy.geekhubhometasks.hometask4.activity;
+package ua.marinovskiy.geekhubhometasks.hometask4.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
