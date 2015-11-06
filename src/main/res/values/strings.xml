@@ -3,6 +3,14 @@
     <string name="btn_first_ht">First home task</string>
     <string name="btn_second_ht">Second home task</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="geekhub_label">Geek Hub Home tasks</string>
+    <string name="home_tasks_label">Home tasks</string>
+
+    <string name="main_label">Main</string>
+
     <!--first home task-->
     <string name="first_ht_label">First Home Task</string>
     <string name="input_text">Please, input some text...</string>
@@ -28,5 +36,12 @@
     <string name="show_previous">Show previous</string>
     <string name="text_next">Next</string>
     <string name="text_previous">Previous</string>
+
+    <!--fourth home task-->
+    <string name="fifth_ht_label">Fifth Home Task</string>
+    <string name="list_view">List view</string>
+    <string name="animations">Animations</string>
+    <string name="animation_text">My animation text</string>
+    <string name="click_whitespace">Click me</string>
 
 </resources>

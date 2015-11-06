@@ -20,23 +20,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ua.marinovskiy.geekhubhometasks.hometask1.FirstHomeTask"
+            android:name=".hometask1.FirstHomeTask"
             android:label="@string/first_ht_label"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="ua.marinovskiy.geekhubhometasks.hometask2.SecondHomeTask"
+            android:name=".hometask2.SecondHomeTask"
             android:label="@string/second_ht_label"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="ua.marinovskiy.geekhubhometasks.hometask3.ThirdHomeTask"
+            android:name=".hometask3.ThirdHomeTask"
             android:label="@string/third_ht_label"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".hometask4.activities.FourthHomeTask"
             android:label="@string/fourth_ht_label"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="ua.marinovskiy.geekhubhometasks.hometask5.FifthHomeTask"
+            android:label="@string/fifth_ht_label"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

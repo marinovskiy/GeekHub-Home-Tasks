@@ -26,4 +26,9 @@
     <!--text-->
     <dimen name="text_main_size">14sp</dimen>
 
+    <!--drawer-->
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="common_icon_size">90dp</dimen>
+    <dimen name="margin_top_fl">25dp</dimen>
+
 </resources>

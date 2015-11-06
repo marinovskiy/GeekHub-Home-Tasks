@@ -1,4 +1,4 @@
-package ua.marinovskiy.geekhubhometasks;
+package ua.marinovskiy.geekhubhometasks.hometask5;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,14 +8,17 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MenuAdapter extends BaseAdapter {
+import ua.marinovskiy.geekhubhometasks.R;
 
-    ArrayList<String> home_tasks;
+public class MyAdapter extends BaseAdapter {
+
+    List<String> home_tasks;
     Context context;
     LayoutInflater layoutInflater;
 
-    public MenuAdapter(Context context, ArrayList<String> home_tasks) {
+    public MyAdapter(Context context, List<String> home_tasks) {
         this.home_tasks = home_tasks;
         this.context = context;
         layoutInflater = (LayoutInflater) context

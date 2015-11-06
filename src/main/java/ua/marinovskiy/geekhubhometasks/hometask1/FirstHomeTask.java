@@ -4,6 +4,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,12 +13,12 @@ import ua.marinovskiy.geekhubhometasks.R;
 
 public class FirstHomeTask extends AppCompatActivity {
 
-    FragmentOne fragmentOne;
-    FragmentTwo fragmentTwo;
-    FragmentTransaction fragmentTransaction;
+    FragmentOne mFragmentOne;
+    FragmentTwo mFragmentTwo;
+    FragmentTransaction mFragmentTransaction;
 
-    TextView textView;
-    Button btn_f_frag, btn_s_frag;
+    TextView mTextView;
+    Button mBtn_f_frag, mBtn_s_frag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,30 +27,43 @@ public class FirstHomeTask extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        textView = (TextView) findViewById(R.id.text_view_fht);
-        btn_f_frag = (Button) findViewById(R.id.btn_f_frag);
-        btn_s_frag = (Button) findViewById(R.id.btn_s_frag);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        fragmentOne = new FragmentOne();
-        fragmentTwo = new FragmentTwo();
+        mTextView = (TextView) findViewById(R.id.text_view_fht);
+        mBtn_f_frag = (Button) findViewById(R.id.btn_f_frag);
+        mBtn_s_frag = (Button) findViewById(R.id.btn_s_frag);
 
-        btn_f_frag.setOnClickListener(new View.OnClickListener() {
+        mFragmentOne = new FragmentOne();
+        mFragmentTwo = new FragmentTwo();
+
+        mBtn_f_frag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout_f_ht, fragmentOne)
+                mFragmentTransaction = getFragmentManager().beginTransaction();
+                mFragmentTransaction.replace(R.id.frame_layout_f_ht, mFragmentOne)
                         .commit();
             }
         });
 
-        btn_s_frag.setOnClickListener(new View.OnClickListener() {
+        mBtn_s_frag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout_f_ht, fragmentTwo)
+                mFragmentTransaction = getFragmentManager().beginTransaction();
+                mFragmentTransaction.replace(R.id.frame_layout_f_ht, mFragmentTwo)
                         .commit();
             }
         });
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

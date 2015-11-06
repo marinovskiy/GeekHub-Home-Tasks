@@ -13,7 +13,7 @@ import ua.marinovskiy.geekhubhometasks.hometask4.interfaces.MyInterface;
 
 public class MyFragment extends Fragment {
 
-    FragmentManager fragmentManager;
+    FragmentManager mFragmentManager;
     MyInterface myInterface;
 
     @Nullable
@@ -34,16 +34,16 @@ public class MyFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        fragmentManager = getActivity().getSupportFragmentManager();
+        mFragmentManager = getActivity().getSupportFragmentManager();
         myInterface = new MyInterface() {
             @Override
             public void showNext() {
-                fragmentManager.beginTransaction().replace(R.id.second_fragment_container, new FragmentNext()).addToBackStack("").commit();
+                mFragmentManager.beginTransaction().replace(R.id.second_fragment_container, new FragmentNext()).addToBackStack("").commit();
             }
 
             @Override
             public void showPrevious() {
-                fragmentManager.beginTransaction().replace(R.id.second_fragment_container, new FragmentPrevious()).addToBackStack("").commit();
+                mFragmentManager.beginTransaction().replace(R.id.second_fragment_container, new FragmentPrevious()).addToBackStack("").commit();
             }
         };
     }

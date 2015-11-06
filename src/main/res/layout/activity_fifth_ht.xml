@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".SecondHomeTask">
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -22,8 +20,6 @@
     </android.support.design.widget.AppBarLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -33,36 +29,30 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <Button
+            android:id="@+id/btn_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="@string/list_view"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_main_size" />
 
-            <Button
-                android:id="@+id/btn_fibonacci"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/main_btn_margin"
-                android:layout_weight="2"
-                android:text="@string/btn_fibonacci" />
-
-            <Button
-                android:id="@+id/btn_factorial"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/main_btn_margin"
-                android:layout_weight="2"
-                android:text="@string/btn_factorial" />
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_animations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="@string/animations"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_main_size" />
 
         <FrameLayout
-            android:id="@+id/frame_layout_s_ht"
+            android:id="@+id/five_frame_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/frame_layout_top_margin" />
+            android:layout_marginTop="@dimen/margin_top_fl" />
+
 
     </LinearLayout>
-
 
 </android.support.design.widget.CoordinatorLayout>

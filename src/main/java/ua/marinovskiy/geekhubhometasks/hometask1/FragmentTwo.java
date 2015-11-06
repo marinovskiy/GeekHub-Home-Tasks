@@ -15,41 +15,41 @@ import ua.marinovskiy.geekhubhometasks.R;
 
 public class FragmentTwo extends Fragment {
 
-    Spinner spinner;
-    Button button;
-    String name, surname = "Simpson ";
-    String data[] = {"Homer", "Marge", "Bart", "Lisa", "Maggie"};
+    Spinner mSpinner;
+    Button mButton;
+    String mName, mSurname = "Simpson ";
+    String mData[] = {"Homer", "Marge", "Bart", "Lisa", "Maggie"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_two, container, false);
 
-        spinner = (Spinner) view.findViewById(R.id.spinner);
-        button = (Button) view.findViewById(R.id.btn_frag_two);
+        mSpinner = (Spinner) view.findViewById(R.id.spinner);
+        mButton = (Button) view.findViewById(R.id.btn_frag_two);
 
         ArrayAdapter<?> adapter = new ArrayAdapter<>(getActivity().getApplicationContext(),
-                R.layout.spinner_item, data);
+                R.layout.spinner_item, mData);
         adapter.setDropDownViewResource(R.layout.spinner_item);
 
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        mSpinner.setAdapter(adapter);
+        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                name = data[position];
+                mName = mData[position];
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                name = "no name";
+                mName = "no mName";
             }
         });
 
-        button.setOnClickListener(new View.OnClickListener() {
+        mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TextView tv = ((TextView) getActivity().findViewById(R.id.text_view_fht));
-                tv.setText(surname + name);
+                tv.setText(mSurname + mName);
             }
         });
 

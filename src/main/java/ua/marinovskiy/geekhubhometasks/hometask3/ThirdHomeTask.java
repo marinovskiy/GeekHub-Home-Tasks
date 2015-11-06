@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -17,7 +18,7 @@ import ua.marinovskiy.geekhubhometasks.R;
 
 public class ThirdHomeTask extends AppCompatActivity {
 
-    private String[] values = new String[]{"Android", "iPhone", "WindowsMobile",
+    private String[] mValues = new String[]{"Android", "iPhone", "WindowsMobile",
             "Blackberry", "Ubuntu", "Windows7", "Mac OS X", "Linux", "Ubuntu", "Windows7",
             "Mac OS X", "Linux", "Ubuntu", "Windows7", "Android", "iPhone", "WindowsMobile"};
 
@@ -27,6 +28,9 @@ public class ThirdHomeTask extends AppCompatActivity {
         setContentView(R.layout.activity_third_ht);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         createAndShowNumbers();
 
@@ -38,8 +42,8 @@ public class ThirdHomeTask extends AppCompatActivity {
 
     private void createAndShowNumbers() {
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < values.length; i++) {
-            list.add(values[i]);
+        for (int i = 0; i < mValues.length; i++) {
+            list.add(mValues[i]);
         }
 
         String strings = TextUtils.join(", ", list);
@@ -50,8 +54,8 @@ public class ThirdHomeTask extends AppCompatActivity {
 
     private void reverseOrder() {
         List<String> list = new ArrayList<>();
-        for (int i = values.length - 1; i >= 0; i--) {
-            list.add(values[i]);
+        for (int i = mValues.length - 1; i >= 0; i--) {
+            list.add(mValues[i]);
         }
 
         String strings = TextUtils.join(", ", list);
@@ -62,9 +66,9 @@ public class ThirdHomeTask extends AppCompatActivity {
 
     private void removeEveryThird() {
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < values.length; i++) {
+        for (int i = 0; i < mValues.length; i++) {
             if ((i + 1) % 3 != 0) {
-                list.add(values[i]);
+                list.add(mValues[i]);
             }
         }
 
@@ -76,8 +80,8 @@ public class ThirdHomeTask extends AppCompatActivity {
 
     private void removeDuplicates() {
         Set<String> set = new LinkedHashSet<>();
-        for (int i = 0; i < values.length; i++) {
-            set.add(values[i]);
+        for (int i = 0; i < mValues.length; i++) {
+            set.add(mValues[i]);
         }
 
         String strings = TextUtils.join(", ", set);
@@ -87,10 +91,10 @@ public class ThirdHomeTask extends AppCompatActivity {
     }
 
     private void sortValues() {
-        Arrays.sort(values);
+        Arrays.sort(mValues);
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < values.length; i++) {
-            list.add(values[i]);
+        for (int i = 0; i < mValues.length; i++) {
+            list.add(mValues[i]);
         }
 
         String strings = TextUtils.join(", ", list);
@@ -118,4 +122,15 @@ public class ThirdHomeTask extends AppCompatActivity {
             }
         }
     };
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
