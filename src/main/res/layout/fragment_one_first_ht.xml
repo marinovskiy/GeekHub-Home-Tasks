@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/edit_text_fht"
+        android:id="@+id/first_ht_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/edit_text_margin"
@@ -15,7 +15,7 @@
         android:textSize="@dimen/text_main_size" />
 
     <Button
-        android:id="@+id/btn_frag_one"
+        android:id="@+id/first_ht_btn_set_text_1"
         android:layout_width="@dimen/main_btn_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

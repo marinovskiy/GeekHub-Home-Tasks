@@ -16,7 +16,7 @@ import java.util.Set;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class ThirdHomeTask extends AppCompatActivity {
+public class ThirdHomeTaskActivity extends AppCompatActivity {
 
     private String[] mValues = new String[]{"Android", "iPhone", "WindowsMobile",
             "Blackberry", "Ubuntu", "Windows7", "Mac OS X", "Linux", "Ubuntu", "Windows7",
@@ -26,7 +26,7 @@ public class ThirdHomeTask extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third_ht);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activity_third);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

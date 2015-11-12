@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class FragmentAnimation extends Fragment {
+public class FragmentAnimationFifthHT extends Fragment {
 
     TextView tv_one;
     Button btn_one, btn_two, btn_three, btn_four;
@@ -23,18 +23,18 @@ public class FragmentAnimation extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_animation, container, false);
+        return inflater.inflate(R.layout.fragment_animation_fifth_ht, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        tv_one = (TextView) view.findViewById(R.id.tv_one);
-        btn_one = (Button) view.findViewById(R.id.btn_anim_one);
-        btn_two = (Button) view.findViewById(R.id.btn_anim_two);
-        btn_three = (Button) view.findViewById(R.id.btn_anim_three);
-        btn_four = (Button) view.findViewById(R.id.btn_anim_four);
+        tv_one = (TextView) view.findViewById(R.id.fifth_ht_tv_one);
+        btn_one = (Button) view.findViewById(R.id.fifth_ht_btn_anim_one);
+        btn_two = (Button) view.findViewById(R.id.fifth_ht_btn_anim_two);
+        btn_three = (Button) view.findViewById(R.id.fifth_ht_btn_anim_three);
+        btn_four = (Button) view.findViewById(R.id.fifth_ht_btn_anim_four);
     }
 
     @Override

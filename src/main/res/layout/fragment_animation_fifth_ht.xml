@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_one"
+        android:id="@+id/fifth_ht_tv_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
@@ -22,32 +22,32 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_anim_one"
+            android:id="@+id/fifth_ht_btn_anim_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:text="Fade in animation" />
+            android:text="@string/fade_anim_text" />
 
         <Button
-            android:id="@+id/btn_anim_two"
+            android:id="@+id/fifth_ht_btn_anim_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:text="Scale animation" />
+            android:text="@string/scale_anim_text" />
 
         <Button
-            android:id="@+id/btn_anim_three"
+            android:id="@+id/fifth_ht_btn_anim_three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:text="Zoom animation" />
+            android:text="@string/zoom_anim_text" />
 
         <Button
-            android:id="@+id/btn_anim_four"
+            android:id="@+id/fifth_ht_btn_anim_four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:text="Slide up animation" />
+            android:text="@string/slide_anim_text" />
 
     </LinearLayout>
 

@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class FactorialFragment extends Fragment {
+public class FragmentFibonacci extends Fragment {
 
     EditText mEt_number;
     Button mBtn_calculate;
@@ -24,11 +24,11 @@ public class FactorialFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_factorial, container, false);
+        View view = inflater.inflate(R.layout.fragment_fibonacci_second_ht, container, false);
 
-        mEt_number = (EditText) view.findViewById(R.id.edit_text_factorial);
-        mBtn_calculate = (Button) view.findViewById(R.id.btn_frag_factorial);
-        mTv_result = (TextView) view.findViewById(R.id.tv_factorial_result);
+        mEt_number = (EditText) view.findViewById(R.id.edit_text_fibonacci);
+        mBtn_calculate = (Button) view.findViewById(R.id.btn_frag_fibonacci);
+        mTv_result = (TextView) view.findViewById(R.id.tv_fibonacci_result);
 
         mBtn_calculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,11 +37,12 @@ public class FactorialFragment extends Fragment {
                     Toast.makeText(getActivity().getApplicationContext(), "You didn't input mNumber", Toast.LENGTH_SHORT).show();
                 } else {
                     mNumber = Integer.parseInt(mEt_number.getText().toString());
-                    if (mNumber > 25) {
-                        Toast.makeText(getActivity().getApplicationContext(), "You input too large mNumber", Toast.LENGTH_SHORT).show();
+                    if (mNumber < 1) {
+                        Toast.makeText(getActivity().getApplicationContext(), "That mNumber is missing in Fibonacci sequence",
+                                Toast.LENGTH_SHORT).show();
                     } else {
-                        mResult = String.valueOf(Calculation.factorial(mNumber));
-                        mTv_result.setText(String.format("Factorial of %s = %s", mNumber, mResult));
+                        mResult = String.valueOf(Calculation.fibonacci(mNumber));
+                        mTv_result.setText(String.format("%sth mNumber of Fibonacci sequence = %s", mNumber, mResult));
                     }
                 }
             }

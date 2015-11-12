@@ -10,10 +10,10 @@ import android.widget.Button;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class SecondHomeTask extends AppCompatActivity {
+public class SecondHomeTaskActivity extends AppCompatActivity {
 
-    FibonacciFragment mFibonacciFragment;
-    FactorialFragment mFactorialFragment;
+    FragmentFibonacci mFragmentFibonacci;
+    FragmentFactorial mFragmentFactorial;
     FragmentTransaction mFragmentTransaction;
 
     Button mBtn_fibonacci, mBtn_factorial;
@@ -22,23 +22,23 @@ public class SecondHomeTask extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_ht);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activity_second);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        mBtn_fibonacci = (Button) findViewById(R.id.btn_fibonacci);
-        mBtn_factorial = (Button) findViewById(R.id.btn_factorial);
+        mBtn_fibonacci = (Button) findViewById(R.id.second_ht_btn_fibonacci);
+        mBtn_factorial = (Button) findViewById(R.id.second_ht_btn_factorial);
 
-        mFibonacciFragment = new FibonacciFragment();
-        mFactorialFragment = new FactorialFragment();
+        mFragmentFibonacci = new FragmentFibonacci();
+        mFragmentFactorial = new FragmentFactorial();
 
         mBtn_fibonacci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mFragmentTransaction = getFragmentManager().beginTransaction();
-                mFragmentTransaction.replace(R.id.frame_layout_s_ht, mFibonacciFragment)
+                mFragmentTransaction.replace(R.id.second_ht_fragment_container, mFragmentFibonacci)
                         .commit();
             }
         });
@@ -47,7 +47,7 @@ public class SecondHomeTask extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mFragmentTransaction = getFragmentManager().beginTransaction();
-                mFragmentTransaction.replace(R.id.frame_layout_s_ht, mFactorialFragment)
+                mFragmentTransaction.replace(R.id.second_ht_fragment_container, mFragmentFactorial)
                         .commit();
             }
         });

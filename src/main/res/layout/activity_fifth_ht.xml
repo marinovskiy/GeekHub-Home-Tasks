@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_activity_fifth"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -30,7 +30,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <Button
-            android:id="@+id/btn_list"
+            android:id="@+id/fifth_ht_btn_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/list_view"
@@ -38,7 +38,7 @@
             android:textSize="@dimen/text_main_size" />
 
         <Button
-            android:id="@+id/btn_animations"
+            android:id="@+id/fifth_ht_btn_animations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
@@ -47,7 +47,7 @@
             android:textSize="@dimen/text_main_size" />
 
         <FrameLayout
-            android:id="@+id/five_frame_layout"
+            android:id="@+id/fifth_ht_fragment_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_fl" />

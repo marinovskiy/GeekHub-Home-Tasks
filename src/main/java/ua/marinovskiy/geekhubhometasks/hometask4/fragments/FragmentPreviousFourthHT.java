@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class FragmentPrevious extends Fragment {
+public class FragmentPreviousFourthHT extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_previous, container, false);
+        return inflater.inflate(R.layout.fragment_previous_fourth_ht, container, false);
     }
 }

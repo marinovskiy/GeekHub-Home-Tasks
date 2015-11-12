@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_activity_first"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -34,7 +34,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <TextView
-            android:id="@+id/text_view_fht"
+            android:id="@+id/first_ht_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -49,14 +49,14 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_f_frag"
+                android:id="@+id/firsth_ht_btn_first_frag"
                 android:layout_width="@dimen/main_btn_width"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/btn_set_first_fragment" />
 
             <Button
-                android:id="@+id/btn_s_frag"
+                android:id="@+id/firsth_ht_btn_second_frag"
                 android:layout_width="@dimen/main_btn_width"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -65,9 +65,8 @@
 
         </LinearLayout>
 
-
         <FrameLayout
-            android:id="@+id/frame_layout_f_ht"
+            android:id="@+id/first_ht_fragment_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/frame_layout_top_margin" />

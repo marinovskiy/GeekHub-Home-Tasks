@@ -1,4 +1,4 @@
-package ua.marinovskiy.geekhubhometasks.hometask5;
+package ua.marinovskiy.geekhubhometasks;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,13 +12,13 @@ import java.util.List;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class MyAdapter extends BaseAdapter {
+public class MyListViewAdapter extends BaseAdapter {
 
     List<String> home_tasks;
     Context context;
     LayoutInflater layoutInflater;
 
-    public MyAdapter(Context context, List<String> home_tasks) {
+    public MyListViewAdapter(Context context, List<String> home_tasks) {
         this.home_tasks = home_tasks;
         this.context = context;
         layoutInflater = (LayoutInflater) context

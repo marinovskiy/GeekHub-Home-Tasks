@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class FirstHomeTask extends AppCompatActivity {
+public class FirstHomeTaskActivity extends AppCompatActivity {
 
-    FragmentOne mFragmentOne;
-    FragmentTwo mFragmentTwo;
+    FragmentOneFirstHT mFragmentOneFirstHT;
+    FragmentTwoFirstHT mFragmentTwoFirstHT;
     FragmentTransaction mFragmentTransaction;
 
     TextView mTextView;
@@ -24,24 +24,24 @@ public class FirstHomeTask extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_ht);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activity_first);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        mTextView = (TextView) findViewById(R.id.text_view_fht);
-        mBtn_f_frag = (Button) findViewById(R.id.btn_f_frag);
-        mBtn_s_frag = (Button) findViewById(R.id.btn_s_frag);
+        mTextView = (TextView) findViewById(R.id.first_ht_text_view);
+        mBtn_f_frag = (Button) findViewById(R.id.firsth_ht_btn_first_frag);
+        mBtn_s_frag = (Button) findViewById(R.id.firsth_ht_btn_second_frag);
 
-        mFragmentOne = new FragmentOne();
-        mFragmentTwo = new FragmentTwo();
+        mFragmentOneFirstHT = new FragmentOneFirstHT();
+        mFragmentTwoFirstHT = new FragmentTwoFirstHT();
 
         mBtn_f_frag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mFragmentTransaction = getFragmentManager().beginTransaction();
-                mFragmentTransaction.replace(R.id.frame_layout_f_ht, mFragmentOne)
+                mFragmentTransaction.replace(R.id.first_ht_fragment_container, mFragmentOneFirstHT)
                         .commit();
             }
         });
@@ -50,7 +50,7 @@ public class FirstHomeTask extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mFragmentTransaction = getFragmentManager().beginTransaction();
-                mFragmentTransaction.replace(R.id.frame_layout_f_ht, mFragmentTwo)
+                mFragmentTransaction.replace(R.id.first_ht_fragment_container, mFragmentTwoFirstHT)
                         .commit();
             }
         });

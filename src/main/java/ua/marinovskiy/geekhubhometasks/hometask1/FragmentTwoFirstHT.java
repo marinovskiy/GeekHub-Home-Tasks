@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class FragmentTwo extends Fragment {
+public class FragmentTwoFirstHT extends Fragment {
 
     Spinner mSpinner;
     Button mButton;
@@ -23,10 +23,10 @@ public class FragmentTwo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_two, container, false);
+        View view = inflater.inflate(R.layout.fragment_two_first_ht, container, false);
 
-        mSpinner = (Spinner) view.findViewById(R.id.spinner);
-        mButton = (Button) view.findViewById(R.id.btn_frag_two);
+        mSpinner = (Spinner) view.findViewById(R.id.first_ht_spinner);
+        mButton = (Button) view.findViewById(R.id.first_ht_set_text_2);
 
         ArrayAdapter<?> adapter = new ArrayAdapter<>(getActivity().getApplicationContext(),
                 R.layout.spinner_item, mData);
@@ -48,7 +48,7 @@ public class FragmentTwo extends Fragment {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView tv = ((TextView) getActivity().findViewById(R.id.text_view_fht));
+                TextView tv = ((TextView) getActivity().findViewById(R.id.first_ht_text_view));
                 tv.setText(mSurname + mName);
             }
         });

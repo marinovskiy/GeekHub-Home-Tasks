@@ -1,19 +1,20 @@
-package ua.marinovskiy.geekhubhometasks.hometask4.activities;
+package ua.marinovskiy.geekhubhometasks.hometask6;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import ua.marinovskiy.geekhubhometasks.R;
-import ua.marinovskiy.geekhubhometasks.hometask4.fragments.MyFragment;
 
-public class FourthHomeTask extends BaseActivity {
+public class SixthHomeTaskListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sixth_ht_list);
 
-        Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activity_sixth);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -21,20 +22,10 @@ public class FourthHomeTask extends BaseActivity {
     }
 
     @Override
-    public boolean isAddFragment() {
-        return true;
-    }
-
-    @Override
-    public void addFragment() {
-        getSupportFragmentManager().beginTransaction().add(R.id.first_fragment_container, new MyFragment()).commit();
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
+                onBackPressed();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

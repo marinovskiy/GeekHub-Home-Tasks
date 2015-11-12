@@ -6,25 +6,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class FifthHomeTask extends AppCompatActivity {
+public class FifthHomeTaskActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fifth_ht);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_activity_fifth);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        findViewById(R.id.btn_list).setOnClickListener(clickListener);
-        findViewById(R.id.btn_animations).setOnClickListener(clickListener);
+        findViewById(R.id.fifth_ht_btn_list).setOnClickListener(clickListener);
+        findViewById(R.id.fifth_ht_btn_animations).setOnClickListener(clickListener);
     }
 
     @Override
@@ -43,11 +42,11 @@ public class FifthHomeTask extends AppCompatActivity {
         public void onClick(View v) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             switch (v.getId()) {
-                case R.id.btn_list:
-                    fragmentManager.beginTransaction().replace(R.id.five_frame_layout, new FragmentList()).addToBackStack("").commit();
+                case R.id.fifth_ht_btn_list:
+                    fragmentManager.beginTransaction().replace(R.id.fifth_ht_fragment_container, new FragmentListFifthHT()).addToBackStack("").commit();
                     break;
-                case R.id.btn_animations:
-                    fragmentManager.beginTransaction().replace(R.id.five_frame_layout, new FragmentAnimation()).addToBackStack("").commit();
+                case R.id.fifth_ht_btn_animations:
+                    fragmentManager.beginTransaction().replace(R.id.fifth_ht_fragment_container, new FragmentAnimationFifthHT()).addToBackStack("").commit();
                     break;
             }
         }

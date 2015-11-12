@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import ua.marinovskiy.geekhubhometasks.R;
 import ua.marinovskiy.geekhubhometasks.hometask4.interfaces.MyInterface;
 
-public class MyFragment extends Fragment {
+public class MainFragmentFourthHT extends Fragment {
 
     FragmentManager mFragmentManager;
     MyInterface myInterface;
@@ -19,15 +19,15 @@ public class MyFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.my_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_main_fourth_ht, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.btn_show_next).setOnClickListener(clickListener);
-        view.findViewById(R.id.btn_show_previous).setOnClickListener(clickListener);
+        view.findViewById(R.id.fourth_ht_btn_next).setOnClickListener(clickListener);
+        view.findViewById(R.id.fourth_ht_btn_previous).setOnClickListener(clickListener);
     }
 
     @Override
@@ -38,12 +38,12 @@ public class MyFragment extends Fragment {
         myInterface = new MyInterface() {
             @Override
             public void showNext() {
-                mFragmentManager.beginTransaction().replace(R.id.second_fragment_container, new FragmentNext()).addToBackStack("").commit();
+                mFragmentManager.beginTransaction().replace(R.id.next_previous_fragment_container, new FragmentNextFourthHT()).addToBackStack("").commit();
             }
 
             @Override
             public void showPrevious() {
-                mFragmentManager.beginTransaction().replace(R.id.second_fragment_container, new FragmentPrevious()).addToBackStack("").commit();
+                mFragmentManager.beginTransaction().replace(R.id.next_previous_fragment_container, new FragmentPreviousFourthHT()).addToBackStack("").commit();
             }
         };
     }
@@ -52,10 +52,10 @@ public class MyFragment extends Fragment {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.btn_show_next:
+                case R.id.fourth_ht_btn_next:
                     myInterface.showNext();
                     break;
-                case R.id.btn_show_previous:
+                case R.id.fourth_ht_btn_previous:
                     myInterface.showPrevious();
                     break;
             }

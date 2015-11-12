@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 
 import ua.marinovskiy.geekhubhometasks.R;
 
-public class FragmentNext extends Fragment {
+public class FragmentNextFourthHT extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_next, container, false);
+        return inflater.inflate(R.layout.fragment_next_fourth_ht, container, false);
     }
 }

@@ -15,11 +15,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import ua.marinovskiy.geekhubhometasks.hometask1.FirstHomeTask;
-import ua.marinovskiy.geekhubhometasks.hometask2.SecondHomeTask;
-import ua.marinovskiy.geekhubhometasks.hometask3.ThirdHomeTask;
-import ua.marinovskiy.geekhubhometasks.hometask4.activities.FourthHomeTask;
-import ua.marinovskiy.geekhubhometasks.hometask5.FifthHomeTask;
+import ua.marinovskiy.geekhubhometasks.hometask1.FirstHomeTaskActivity;
+import ua.marinovskiy.geekhubhometasks.hometask2.SecondHomeTaskActivity;
+import ua.marinovskiy.geekhubhometasks.hometask3.ThirdHomeTaskActivity;
+import ua.marinovskiy.geekhubhometasks.hometask4.activities.FourthHomeTaskActivity;
+import ua.marinovskiy.geekhubhometasks.hometask5.FifthHomeTaskActivity;
+import ua.marinovskiy.geekhubhometasks.hometask6.SixthHomeTaskListActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -45,11 +46,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        clickMe = (TextView) findViewById(R.id.tv_geekhub);
+        clickMe = (TextView) findViewById(R.id.main_tv_geekhub);
 
-        imageViewAndroid = (ImageView) findViewById(R.id.iv_android);
-        imageViewIOS = (ImageView) findViewById(R.id.iv_ios);
-        imageViewGameDev = (ImageView) findViewById(R.id.iv_gamedev);
+        imageViewAndroid = (ImageView) findViewById(R.id.main_iv_android);
+        imageViewIOS = (ImageView) findViewById(R.id.main_iv_ios);
+        imageViewGameDev = (ImageView) findViewById(R.id.main_iv_gamedev);
 
         clickMe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,27 +107,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id) {
             case R.id.first_home_task:
                 drawerLayout.closeDrawer(GravityCompat.START);
-                intent = new Intent(MainActivity.this, FirstHomeTask.class);
+                intent = new Intent(MainActivity.this, FirstHomeTaskActivity.class);
                 startActivity(intent);
                 break;
             case R.id.second_home_task:
                 drawerLayout.closeDrawer(GravityCompat.START);
-                intent = new Intent(MainActivity.this, SecondHomeTask.class);
+                intent = new Intent(MainActivity.this, SecondHomeTaskActivity.class);
                 startActivity(intent);
                 break;
             case R.id.third_home_task:
                 drawerLayout.closeDrawer(GravityCompat.START);
-                intent = new Intent(MainActivity.this, ThirdHomeTask.class);
+                intent = new Intent(MainActivity.this, ThirdHomeTaskActivity.class);
                 startActivity(intent);
                 break;
             case R.id.fourth_home_task:
                 drawerLayout.closeDrawer(GravityCompat.START);
-                intent = new Intent(MainActivity.this, FourthHomeTask.class);
+                intent = new Intent(MainActivity.this, FourthHomeTaskActivity.class);
                 startActivity(intent);
                 break;
             case R.id.fifth_home_task:
                 drawerLayout.closeDrawer(GravityCompat.START);
-                intent = new Intent(MainActivity.this, FifthHomeTask.class);
+                intent = new Intent(MainActivity.this, FifthHomeTaskActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.sixth_home_task:
+                drawerLayout.closeDrawer(GravityCompat.START);
+                intent = new Intent(MainActivity.this, SixthHomeTaskListActivity.class);
                 startActivity(intent);
                 break;
         }

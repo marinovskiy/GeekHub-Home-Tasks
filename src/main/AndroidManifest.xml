@@ -11,7 +11,6 @@
         <activity
             android:name="ua.marinovskiy.geekhubhometasks.MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,29 +19,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".hometask1.FirstHomeTask"
+            android:name=".hometask1.FirstHomeTaskActivity"
             android:label="@string/first_ht_label"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".hometask2.SecondHomeTask"
+            android:name=".hometask2.SecondHomeTaskActivity"
             android:label="@string/second_ht_label"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".hometask3.ThirdHomeTask"
+            android:name=".hometask3.ThirdHomeTaskActivity"
             android:label="@string/third_ht_label"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".hometask4.activities.FourthHomeTask"
+            android:name=".hometask4.activities.FourthHomeTaskActivity"
             android:label="@string/fourth_ht_label"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="ua.marinovskiy.geekhubhometasks.hometask5.FifthHomeTask"
+            android:name=".hometask5.FifthHomeTaskActivity"
             android:label="@string/fifth_ht_label"
-            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".hometask6.SixthHomeTaskListActivity"
+            android:label="@string/six_ht_label"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".hometask6.SixthHomeTaskViewActivity"
+            android:label="@string/six_ht_label"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

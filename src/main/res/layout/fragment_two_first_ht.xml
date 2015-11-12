@@ -5,14 +5,14 @@
     android:orientation="vertical">
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/first_ht_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/spinner_margin"
         android:layout_marginRight="@dimen/spinner_margin" />
 
     <Button
-        android:id="@+id/btn_frag_two"
+        android:id="@+id/first_ht_set_text_2"
         android:layout_width="@dimen/main_btn_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
